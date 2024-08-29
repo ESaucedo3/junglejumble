@@ -1,4 +1,5 @@
 import { AppState } from "../AppState.js"
+import { jumblesService } from "../services/JumblesService.js";
 import { setHTML } from "../utils/Writer.js";
 
 export class JumblesController {
@@ -6,6 +7,7 @@ export class JumblesController {
   constructor() {
     console.log('jumbles constructor ready!')
     this.drawJumbleList()
+    AppState.on('activeJumble', this.drawActiveJumble)
   }
 
   drawJumbleList() {
@@ -15,7 +17,12 @@ export class JumblesController {
     setHTML('jumble-list', jumbleList);
   }
 
-  setActiveJumble(jumbleId) {
+  drawActiveJumble() {
+    const actualJumble = AppState.activeJumble;
+    setHTML('active-jumble', actualJumble.activeJumbleTemplate);
+  }
 
+  setActiveJumble(jumbleId) {
+    jumblesService.setActiveJumble(jumbleId);
   }
 }
