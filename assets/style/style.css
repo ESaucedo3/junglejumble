@@ -1,1 +1,6 @@
 /* BASIC STYLES HERE */
+main {
+  background-image: url(../img/fruits.png);
+  background-position: center;
+  background-size: cover;
+}

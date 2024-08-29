@@ -11,7 +11,15 @@ export class Jumble {
     this.endTime = null
   }
 
-  get ListTemplate() { // a basic list template to get drawing
-    return `<li>${this.name}</li>`
+  get jumbleListTemplate() {
+    return `<div class="d-flex align-items-center">
+              <button onclick="app.JumblesController.setActiveJumble('${this.id}')">Start</button>
+              <p class="m-0">${this.name} Jumble | 34.3s | 55.3wpm</p>
+            </div>`
+  }
+
+  get activeJumbleTemplate() {
+    return ` <p>${this.name} Jumble Fastest Time 30s</p>
+            <p>${this.body}</p>`
   }
 }
