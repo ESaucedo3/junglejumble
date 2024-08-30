@@ -1,19 +1,17 @@
-import { AppState } from "../AppState.js"
-import { jumblesService } from "../services/JumblesService.js";
-import { setHTML } from "../utils/Writer.js";
+import {AppState} from '../AppState.js';
+import {jumblesService} from '../services/JumblesService.js';
+import {setHTML} from '../utils/Writer.js';
 
 export class JumblesController {
-
   constructor() {
-    console.log('jumbles constructor ready!')
-    this.drawJumbleList()
-    AppState.on('activeJumble', this.drawActiveJumble)
+    this.drawJumbleList();
+    AppState.on('activeJumble', this.drawActiveJumble);
   }
 
   drawJumbleList() {
     const allJumbles = AppState.jumbles;
     let jumbleList = '';
-    allJumbles.forEach(jumble => jumbleList += jumble.jumbleListTemplate);
+    allJumbles.forEach((jumble) => (jumbleList += jumble.jumbleListTemplate));
     setHTML('jumble-list', jumbleList);
   }
 

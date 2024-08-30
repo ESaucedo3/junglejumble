@@ -48,18 +48,13 @@
       </section>
       <section class="row">
         <div class="col-8 ">
-          <div id="active-jumble" class="card">
-            <!-- NOTE active jumble will go here -->
-            <!-- <p>Easy Jumble Fastest Time 30s</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, debitis ex quis nam provident
-              deleniti veniam! Laborum dolorem temporibus exercitationem! Voluptas consequuntur commodi nulla optio
-              voluptatum expedita deserunt, deleniti dicta!</p> -->
-          </div>
+          <!-- NOTE active jumble will go here -->
+          <div id="active-jumble" class="card"></div>
           <div>
             <div class="mt-5">
-              <form onsubmit="app.GameController.checkJumble()">
+              <form onsubmit="app.GamesController.checkJumble()">
                 <div class="-mb-2">
-                  <textarea name="body" class="w-50" rows="6"></textarea>
+                  <textarea name="body" class="w-50" rows="7"></textarea>
                 </div>
                 <div>
                   <button class="w-50">Submit</button>
@@ -72,21 +67,7 @@
         <div class="col-4">
           <h2 class="text-center">Jumbles!</h2>
           <!-- NOTE Jumble Difficulties will generated here -->
-          <div id="jumble-list">
-
-            <!-- <div class="d-flex align-items-center">
-              <button>Start</button>
-              <p class="m-0">Easy Jumble | 34.3s | 55.3wpm</p>
-            </div>
-            <div class="d-flex align-items-center">
-              <button>Start</button>
-              <p class="m-0">Meium Jumble | 34.3s | 55.3wpm</p>
-            </div>
-            <div class="d-flex align-items-center">
-              <button>Start</button>
-              <p class="m-0">Hard Jumble | 34.3s | 55.3wpm</p>
-            </div> -->
-          </div>
+          <div id="jumble-list"></div>
 
           <form>
             <div>
@@ -104,18 +85,6 @@
       </section>
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
   </main>
 
